@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Payment App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f8fc;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    .product {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .product img {
+      width: 60px;
+      border-radius: 10px;
+    }
+    .payment-methods {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .method {
+      flex: 1 1 45%;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #f0f0f0;
+    }
+    .pay-btn {
+      width: 100%;
+      padding: 15px;
+      background: #4c67f5;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .receipt {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .receipt img {
+      width: 120px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Buy Product</h2>
+    <div class="product">
+      <div>
+        <strong>Mogu Mogu Lychee</strong><br>
+        $1.50
+      </div>
+      <img src="https://i.imgur.com/C2gugGZ.png" alt="Mogu Mogu">
+    </div>
+
+    <h3>Payment Method</h3>
+    <div class="payment-methods">
+      <div class="method">Credit / Debit Card</div>
+      <div class="method">QPay</div>
+      <div class="method">hipay</div>
+      <div class="method">MonPay</div>
+    </div>
+
+    <button class="pay-btn">Pay $1.50</button>
+
+    <div class="receipt">
+      <h4>Receipt</h4>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Ebarimt+Demo" alt="QR Receipt">
+    </div>
+  </div>
+</body>
+</html>
